@@ -1,7 +1,11 @@
-import express from "express";
-const app = express();
+import app from "./app";
+
 const port = 5000;
 
-app.listen(port, () => {
-  console.log(`App is listening on port ${port}`);
-});
+async function main() {
+  const server = app.listen(port, () => {
+    console.log("Ph health care sever is running on port", port);
+  });
+}
+
+main()
